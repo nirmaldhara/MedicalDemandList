@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="med.demand.controller.SignupController">
+    <children>
+        <TitledPane animated="false" prefHeight="618.0" prefWidth="284.0" text="SignUp">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="513.0" prefWidth="798.0">
+                    <children>
+                        <TextField fx:id="txtName" layoutX="15.0" layoutY="181.0" prefHeight="30.0" prefWidth="370.0" promptText="Name" />
+                        <TextField fx:id="txtEmail" layoutX="412.0" layoutY="181.0" prefHeight="30.0" prefWidth="370.0" promptText="Email" />
+                        <TextField fx:id="txtMobile" layoutX="15.0" layoutY="259.0" prefHeight="30.0" prefWidth="370.0" promptText="Mobile no" />
+                        <TextField fx:id="txtUserId" layoutX="413.0" layoutY="259.0" prefHeight="30.0" prefWidth="370.0" promptText="User Id" />
+                        
+                        <ComboBox fx:id="comboGender" layoutX="17.0" layoutY="393.0" prefHeight="30.0" prefWidth="370.0" promptText="Gender">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Male" />
+                                    <String fx:value="Female" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <PasswordField fx:id="txtPassword" layoutX="15.0" layoutY="323.0" prefHeight="30.0" prefWidth="370.0" promptText="Password" />
+                        <PasswordField fx:id="txtRepassword" layoutX="412.0" layoutY="323.0" prefHeight="30.0" prefWidth="370.0" promptText="Retype Password" />
+                        
+                        <Button fx:id="btnSignup" layoutX="420.0" layoutY="393.0" mnemonicParsing="false" onAction="#doSignUp" prefHeight="30.0" prefWidth="370.0" text="Sign Up" />
+                        <Label fx:id="lblBlankName" layoutX="23.0" layoutY="209.0" text="name is blank" textFill="RED" />
+                  <Label fx:id="lblblankEmail" layoutX="420.0" layoutY="209.0" text="email is blank" textFill="RED" />
+                  <Label fx:id="lblblankMobile" layoutX="23.0" layoutY="287.0" text="mobile is blank" textFill="RED" />
+                  <Label fx:id="lblblankUserid" layoutX="421.0" layoutY="287.0" text="userid is blank" textFill="RED" />
+                  <Label fx:id="lblblankPassword" layoutX="23.0" layoutY="350.0" text="password is blank" textFill="RED" />
+                  <Label fx:id="lblblankRepassword" layoutX="420.0" layoutY="350.0" text="repassword is blank" textFill="RED" />
+                  <Label fx:id="lblmsgSignup" layoutX="315.0" layoutY="128.0" text="signup message" textFill="RED" />
+                  <ImageView fitHeight="109.0" fitWidth="171.0" layoutX="345.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/signup.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblblankGender" layoutX="25.0" layoutY="423.0" text="Gender is blank" textFill="RED" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+    </children>
+</VBox>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="med.demand.controller.UploadController">
+    <children>
+        <TitledPane animated="false" prefHeight="618.0" prefWidth="284.0" text="UploadData">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="513.0" prefWidth="798.0">
+               <children>
+                  <Button fx:id="btnFileChooser" layoutX="313.0" layoutY="42.0" mnemonicParsing="false" onAction="#openFileChooser" text="Brows" />
+                  <TextField fx:id="txtFilePath" editable="false" layoutX="61.0" layoutY="42.0" prefHeight="25.0" prefWidth="252.0" />
+                  <Button fx:id="btnFileUpload" layoutX="373.0" layoutY="42.0" mnemonicParsing="false" onAction="#onUploadButtonClick" text="upload" />
+                  <ImageView fx:id="imgProcess" fitHeight="150.0" fitWidth="200.0" layoutX="287.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-gears.gif" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblMsgProcess" layoutX="284.0" layoutY="122.0" text="Please Wait while processing data.." />
+                  <Label fx:id="lblMsgFileChooser" layoutX="61.0" layoutY="14.0" text="Please choose the csv file" textFill="#da1010" />
+               </children></AnchorPane>
+            </content>
+        </TitledPane>
+    </children>
+</VBox>
